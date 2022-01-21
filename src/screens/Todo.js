@@ -8,6 +8,7 @@ import {
 } from "react-native";
 import TodoList from "../components/TodoList";
 import AppHelpers from "../utils/Helpers";
+import Colors from "../utils/Colors";
 
 const  Todo = () => {
     const [title, setTitle] = useState("");
@@ -57,7 +58,7 @@ const  Todo = () => {
     };
 
     useEffect(() => {
-        // check local storage for availble todos
+        // check local storage for available todos
            AppHelpers.getTodos((value) => setTodos(value))
     },[])
 
@@ -70,7 +71,7 @@ const  Todo = () => {
                     onChangeText={value => setTitle(value)}
                     style={styles.textbox}
                 />
-                <Button title="Add" color="#7F39FB" onPress={() => addTodo()} />
+                <Button title="Add" color={Colors.primary} onPress={() => addTodo()} />
             </View>
 
             <ScrollView>
@@ -90,12 +91,6 @@ const  Todo = () => {
 export default Todo
 
 const styles = StyleSheet.create({
-    statusBar: {
-        backgroundColor: "#7F39FB",
-        color: "#fff",
-        width: "100%",
-        height: 30
-    },
     container: {
         flex: 1,
         backgroundColor: "#fff",
@@ -110,7 +105,7 @@ const styles = StyleSheet.create({
     },
     textbox: {
         borderWidth: 1,
-        borderColor: "#7F39FB",
+        borderColor: Colors.primary,
         borderRadius: 8,
         padding: 10,
         margin: 10,

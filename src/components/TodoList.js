@@ -1,6 +1,7 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import Icon from "react-native-vector-icons/MaterialIcons";
+import Colors from "../utils/Colors";
 
 const TodoList = (props) =>  {
     return (
@@ -36,7 +37,7 @@ const styles = StyleSheet.create({
         backgroundColor: "white",
         padding: 10,
         borderBottomWidth: 0.5,
-        borderBottomColor: "#666666"
+        borderBottomColor: Colors.primary
     },
     leading: {
         width: "10%"

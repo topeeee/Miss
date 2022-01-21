@@ -1,5 +1,6 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
+import Colors from "../utils/Colors";
 
 export default function AppBar(){
     return (
@@ -11,7 +12,7 @@ export default function AppBar(){
 
 const styles = StyleSheet.create({
     appBar: {
-        backgroundColor: "#7F39FB",
+        backgroundColor: Colors.primary,
         color: "white",
         width: "100%",
         height: 50,
