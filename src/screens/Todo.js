@@ -73,7 +73,6 @@ const  Todo = () => {
                 />
                 <Button title="Add" color={Colors.primary} onPress={() => addTodo()} />
             </View>
-
             <ScrollView>
                 {todos && todos?.length > 0 && todos.map(todo => (
                     <TodoList
